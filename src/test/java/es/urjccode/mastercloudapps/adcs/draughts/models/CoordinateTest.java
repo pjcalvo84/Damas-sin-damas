@@ -16,7 +16,7 @@ public class CoordinateTest {
     }
 
     @Test
-    public void testGivenDiagonalBetwennTwhoCoordinate(){
+    public void testGivenDiagonalBetwennTwoCoordinate(){
         assertThat(3, is(new Coordinate(3, 4).diagonalDistance(new Coordinate(0, 7))));
     }
 
