@@ -39,10 +39,10 @@ public class GameTest extends BaseTest {
 
     @Test
     public void testGivenGameWhenMoveEmptySquaerThenEmptySquareError() {
-        Coordinate[][] coordinates = new Coordinate[][] {
-                { new Coordinate(4, 3), new Coordinate(3, 4) }, };
-        when(board.isEmpty(coordinates[0][0])).thenReturn(true);
-        assertThat(Error.EMPTY_ORIGIN, is(game.move(coordinates[0][0], coordinates[0][1])));
+        Coordinate origin = new Coordinate(4, 3);
+        Coordinate target = new Coordinate(3, 4);
+        when(board.isEmpty(origin)).thenReturn(true);
+        assertThat(Error.EMPTY_ORIGIN, is(game.move(origin, target)));
     }
 
 
