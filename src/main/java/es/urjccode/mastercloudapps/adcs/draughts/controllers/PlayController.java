@@ -19,7 +19,7 @@ public class PlayController{
     }
 
 	public Piece getPiece(Coordinate origin) {
-		return null;
+		return game.getPiece(origin);
 	}
 
 	public Color getColor() {

@@ -36,7 +36,7 @@ public class GameTest extends BaseTest {
         error = game.move(origin, target);
         assertThat(Error.OUT_COORDINATE, is(error));
     }
-/*
+
     @Test
     public void testGivenGameWhenMoveEmptySquaerThenEmptySquareError() {
         Coordinate[][] coordinates = new Coordinate[][] {
@@ -80,7 +80,6 @@ public class GameTest extends BaseTest {
         error = game.move(origin, target);
         assertThat(Error.NOT_ADVANCED, is(error));
     }
-*/
 
     @Test
     public void testGivenGameWhenMoveBadDistanceThenError() {

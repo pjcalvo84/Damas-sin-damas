@@ -54,4 +54,8 @@ public class Game {
 	public String toString() {
 		return this.board + "\n" + this.turn;
 	}
+
+	public Piece getPiece(Coordinate origin) {
+		return board.getPiece(origin);
+	}
 }
