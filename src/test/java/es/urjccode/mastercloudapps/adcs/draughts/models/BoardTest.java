@@ -3,6 +3,9 @@ package es.urjccode.mastercloudapps.adcs.draughts.models;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -21,9 +24,9 @@ public class BoardTest {
                 Coordinate coordinate = new Coordinate(i,j);
                 Color color = board.getColor(coordinate);
                 if (coordinate.isBlack()){
-                    assertEquals(Color.BLACK, color);
+                    assertThat(Color.BLACK,is(color));
                 } else {
-                    assertNull(color);
+                    assertThat(color, is(nullValue()));
                 }
             }
         }
@@ -32,9 +35,9 @@ public class BoardTest {
                 Coordinate coordinate = new Coordinate(i,j);
                 Color color = board.getColor(coordinate);
                 if (coordinate.isBlack()){
-                    assertEquals(Color.WHITE, color);
+                    assertThat(Color.WHITE,is(color));
                 } else {
-                    assertNull(color);
+                    assertThat(color, is(nullValue()));
                 }
             }
         }
